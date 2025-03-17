@@ -29,9 +29,16 @@ To run manually:
 ```
 python3 dunst_vol_not.py
 ```
-To run at start run:
+To run at start run we will create a desktop file:
 ```
-sudo nano /etc/rc.local
+sudo nano /etc/xdg/autostart/volume-osd.desktop
 ```
-Add the following ```sudo python3 /home/pi/volume-osd/dunst_vol_not.py &``` and press Ctrl+O then Crtl+X and reboot the pi.
+Add the following
+```
+Name=Volume-OSD
+Type=Application
+Name=Volume-OSD
+Exec=/usr/bin/python3 /home/pi/volume-osd/dunst_vol_not.py
+```
+Then press Ctrl+O then Crtl+X and reboot the pi.
 
